@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:5432/todolist
+    username: ${DB_USER}
+    password: ${DB_PASS}
+    driver-class-name: org.postgresql.Driver
+logging:
+  level:
+    root: INFO
+  file:
+    name: todo-list.log
+    path: /
