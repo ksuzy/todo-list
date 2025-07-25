@@ -1,6 +1,5 @@
-package de.ksuzy.todolist.database.entity;
+package de.ksuzy.todolist.dto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,13 +11,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Entity
-public class Task {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class TaskDTO {
+
     private long id;
 
-    @Column(nullable = false)
     private String title;
 
     private boolean done;
@@ -26,10 +22,5 @@ public class Task {
     private LocalDateTime createdAt;
 
     private LocalDateTime deadline;
-
-    @PrePersist
-    protected void onCreate() {
-        this.createdAt = LocalDateTime.now();
-        this.done = false;
-    }
 }
+
