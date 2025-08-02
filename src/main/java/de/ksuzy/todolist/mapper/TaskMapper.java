@@ -3,6 +3,7 @@ package de.ksuzy.todolist.mapper;
 import de.ksuzy.todolist.database.entity.Task;
 import de.ksuzy.todolist.dto.TaskDTO;
 import org.mapstruct.Mapper;
+import org.mapstruct.MappingTarget;
 
 @Mapper(componentModel = "spring")
 public interface TaskMapper {
@@ -10,4 +11,6 @@ public interface TaskMapper {
     TaskDTO toDto(Task task);
 
     Task toEntity(TaskDTO dto);
+
+    void updateTaskFromDto(TaskDTO dto, @MappingTarget Task entity);
 }
