@@ -1,6 +1,5 @@
 package de.ksuzy.todolist.service;
 
-import de.ksuzy.todolist.database.entity.Task;
 import de.ksuzy.todolist.database.repository.TaskRepository;
 import de.ksuzy.todolist.dto.TaskDTO;
 import de.ksuzy.todolist.mapper.TaskMapper;
